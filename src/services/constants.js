@@ -1,0 +1,7 @@
+const CONSTANTS = {
+  VALID_MIN_AVG_SPEED: 5,
+  VALID_MAX_AVG_SPEED: 100,
+  COMMAND_DRIVER: 'Driver',
+  COMMAND_TRIP: 'Trip',
+}
+export default CONSTANTS
