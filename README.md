@@ -9,10 +9,10 @@ In the project directory, you can run below commands to run product locally:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## About Product
-# This product is developed to keep track of driving history of people.
-# The product will process an .txt input file.
-# Each line in the input file will start with a command. There are two possible
+# About Product
+## This product is developed to keep track of driving history of people.
+## The product will process an .txt input file.
+## Each line in the input file will start with a command. There are two possible
 commands.(Driver, Trip)
 
 ## Driver, which will register a new Driver in the app.
