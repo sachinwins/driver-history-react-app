@@ -10,16 +10,15 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 # About Product
-## This product is developed to keep track of driving history of people.
-## The product will process an .txt input file.
-## Each line in the input file will start with a command. There are two possible
-commands.(Driver, Trip)
+1. This product is developed to keep track of driving history of people.
+2. The product will process an .txt input file.
+3. Each line in the input file will start with a command. There are two possible commands.(Driver, Trip)
 
-## Driver, which will register a new Driver in the app.
+## Command 1: "Driver", which will register a new Driver in the app.
 Example:
 `Driver Terence`
 
-## Trip, which will record a trip attributed to a driver. 
+## Command 2: "Trip", which will record a trip attributed to a driver. 
 `Trip Terence 07:15 07:45 17.3` (Command, Driver Name, Start Time, End Time, Distance Travelled)
 
 ## Product Requirements
@@ -32,6 +31,7 @@ speed.
 6. Round miles per hour to the nearest integer.
 
 ## Example Input
+``````````````
 Driver John
 Driver Tree
 Driver Dom
@@ -45,9 +45,10 @@ Trip Tree 07:30 07:45 20.3
 Trip Brian 08:30 09:45 55.5
 Trip Tree 07:30 07:45 20.6
 Trip Dom 08:30 09:45 50.8
+```````````````````````````
 
-## Expected Output
-Screenshot to be added
+## Expected Output as per screenshot below
+https://github.com/sachinwins/driver-history-react-app/blob/master/public/screenshot.JPG
 
 ## Project Complexity
 1. Atomic Design pattern
@@ -73,16 +74,16 @@ Screenshot to be added
 1. Production build will be generated in "build" folder using `npm run build` which is deployed on AWS S3 bucket
 2. "driverHistory.txt" is a sample txt file 
 3. "src"  is the core folder of product
-### index.js - will render our application by injecting App.js 
-### app.js - will work a main container of all child elements/components
-### components - 2 react components are created in this  folder
-#### FileSelector - this component will render text input field in UI, process uploaded file, get the result by calling services and pass it to App component.
-#### DriverHistoryTable - App component will pass result object to this table and this react component will render report as a responsive table in UI
-### services - This folder contains supporting file and "Trip.js" class file 
-#### Trip.js file is a Class which can be called to create a constructor object of a valid Trip. 
-#### getTrips.js - is a Trip helper file to process the input data and get the final result as Map() iterator
-#### utils.js - Utils function are declared here to reuse it, to separate from core logic
-#### constants.js - Any constants are declared here and import from here to use it, so in future when we want to change of constants , we can do it using a single change at this place only
+## index.js - will render our application by injecting App.js 
+## app.js - will work a main container of all child elements/components
+## components - 2 react components are created in this  folder
+### 1. FileSelector - this component will render text input field in UI, process uploaded file, get the result by calling services and pass it to App component.
+### 2. DriverHistoryTable - App component will pass result object to this table and this react component will render report as a responsive table in UI
+## services - This folder contains supporting file and "Trip.js" class file 
+### 1. Trip.js file is a Class which can be called to create a constructor object of a valid Trip. 
+### 2. getTrips.js - is a Trip helper file to process the input data and get the final result as Map() iterator
+### 3. utils.js - Utils function are declared here to reuse it, to separate from core logic
+### 4. constants.js - Any constants are declared here and import from here to use it, so in future when we want to change of constants , we can do it using a single change at this place only
 
 
 
