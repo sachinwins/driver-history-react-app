@@ -26,7 +26,6 @@ const getTrips = (allLines) => {
     mapDrivers.set(driverName, drivers[driverName])
   })
 
-  console.log(`mapDrivers = ${mapDrivers}`)
   for (let key of mapDrivers.keys()) {
     let driverTripDetails = mapDrivers.get(key).trips
 
@@ -40,7 +39,7 @@ const getTrips = (allLines) => {
 
     mapDrivers.set(key, drivers[key])
   }
-  console.log('mapDrivers = ', mapDrivers)
+
   mapDrivers.forEach((key, value) => {
     const driverName = value
     const { totalDuration, totalDistance, mph } = key
@@ -52,7 +51,6 @@ const getTrips = (allLines) => {
     }
     driverHistory.push(record)
   })
-  console.log('driverHistory = ', driverHistory)
   return driverHistory
 }
 
